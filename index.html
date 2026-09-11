@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>F & H Glowshift | Travel Planner</title>
+    <link rel="icon" type="image/png" href="https://www.glowshiftshift.co.za/images/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.glowshiftshift.co.za/images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a class="logo" href="#top" aria-label="F & H Glowshift home">
+                <img src="images/Logo.jpg" alt="F & H Glowshift Luxury Lifestyle logo">
+                <span>F & H <strong>Glowshift</strong></span>
+            </a>
+
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="#planner">Planner</a>
+                <a href="#checkout">EFT Checkout</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <button class="cart-btn" id="cartBtn">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>Order</span>
+                <span class="cart-badge" id="cartBadge">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main id="top">
+        <section class="hero rose-section">
+            <div class="rose-accent rose-accent-one" aria-hidden="true">&#10048;</div>
+            <div class="rose-accent rose-accent-two" aria-hidden="true">&#10048;</div>
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Luxury lifestyle travel printable</p>
+                    <h1>Passport to Paradise Travel Planner</h1>
+                    <p>Plan the journey beautifully: road trip prep, outfits, beauty essentials, bag packing, gadgets, budgets, and destination notes in one polished PDF.</p>
+                    <div class="hero-actions">
+                        <a class="primary-link" href="#checkout">Buy for R150</a>
+                        <a class="secondary-link" href="images/Passport_to_Paradise_A4.pdf" target="_blank" rel="noopener">Preview PDF</a>
+                    </div>
+                </div>
+                <div class="hero-media" aria-label="Travel planner highlights">
+                    <img src="images/Logo.jpg" alt="F & H Glowshift luxury travel brand mark">
+                </div>
+            </div>
+        </section>
+
+        <section class="container product-section" id="planner">
+            <div class="product-card featured-product">
+                <div class="product-image">
+                    <i class="fa-solid fa-plane-departure"></i>
+                    <span>PDF</span>
+                </div>
+                <div class="product-info">
+                    <span class="category-tag">Travel, car, beauty, bags and gadgets</span>
+                    <h2>Passport to Paradise A4 Travel Planner</h2>
+                    <p class="product-desc">A complete digital travel planner for lifestyle-focused trips, including packing prompts, car travel essentials, beauty and makeup notes, bag organization, gadget checklists, itinerary planning, and budget tracking.</p>
+                    <div class="feature-list" aria-label="Planner contents">
+                        <span><i class="fa-solid fa-car-side"></i> Car accessories</span>
+                        <span><i class="fa-solid fa-wand-magic-sparkles"></i> Makeup</span>
+                        <span><i class="fa-solid fa-suitcase-rolling"></i> Bags</span>
+                        <span><i class="fa-solid fa-mobile-screen"></i> Gadgets</span>
+                    </div>
+                    <div class="product-footer">
+                        <span class="price">R150.00</span>
+                        <button class="add-btn" id="addPlannerBtn">Add to Order</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="checkout-band" id="checkout">
+            <div class="container checkout-layout">
+                <div>
+                    <p class="eyebrow">Simple manual EFT</p>
+                    <h2>Checkout</h2>
+                    <p>Enter your details, use the generated reference for your bank transfer, then confirm your order. Your PDF is released by email once your payment is verified.</p>
+                </div>
+
+                <form class="checkout-card" id="checkoutForm">
+                    <div class="order-summary">
+                        <div>
+                            <span>Selected product</span>
+                            <strong id="selectedProductName">Passport to Paradise A4 Travel Planner</strong>
+                        </div>
+                        <strong id="orderTotal">R150.00</strong>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="custName">Full Name</label>
+                        <input type="text" id="custName" name="custName" required placeholder="Your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="custEmail">Email Address</label>
+                        <input type="email" id="custEmail" name="custEmail" required placeholder="you@example.com">
+                    </div>
+
+                    <div class="banking-box">
+                        <div class="banking-title">
+                            <i class="fa-solid fa-building-columns"></i>
+                            <h3>Bank Transfer Details</h3>
+                        </div>
+                        <dl>
+                            <div><dt>Bank Name</dt><dd>FNB/RMB</dd></div>
+                            <div><dt>Account Name</dt><dd>Fathima Ali / Fusion Aspire</dd></div>
+                            <div><dt>Account Number</dt><dd>62106959771</dd></div>
+                            <div><dt>Branch Code</dt><dd>250655</dd></div>
+                            <div><dt>Account Type</dt><dd>Savings</dd></div>
+                            <div class="reference-row"><dt>Order Reference</dt><dd id="orderReference">EFT-0000</dd></div>
+                        </dl>
+                        <p>Please use the order reference as your payment reference in your bank app.</p>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitOrderBtn">Confirm Payment & Complete Order</button>
+                    <p class="checkout-note" id="checkoutStatus">After confirmation, please send your Proof of Payment via WhatsApp so your PDF can be released.</p>
+                </form>
+            </div>
+        </section>
+        <section class="contact-section" id="contact">
+            <div class="container contact-layout">
+                <div>
+                    <p class="eyebrow">Contact F & H Glowshift</p>
+                    <h2>Questions before you order?</h2>
+                    <p>Reach out directly for travel planner help, order questions, or EFT confirmation support.</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-rose" aria-hidden="true">&#10048;</div>
+                    <a class="contact-link whatsapp-link" href="https://wa.me/27605645295" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>WhatsApp 060 564 5295</span>
+                    </a>
+                    <a class="contact-link" href="mailto:fathima.bbali@gmail.com">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>fathima.bbali@gmail.com</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-card">
+            <button class="close-btn" id="closeModalBtn" aria-label="Close confirmation">&times;</button>
+            <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <h3>Order Received</h3>
+            <p>Order Received! To complete your purchase and receive your PDF, please transfer payment and send your Proof of Payment (PoP) via WhatsApp to +27 60 564 5295. Once verified, your download link will be emailed to you.</p>
+            <p class="modal-sub">Order reference: <strong id="successReference"></strong><br>Email: <strong id="sentEmailDisplay"></strong></p>
+            <a class="submit-btn email-link" href="https://wa.me/27605645295" target="_blank" rel="noopener">Send Proof on WhatsApp</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
